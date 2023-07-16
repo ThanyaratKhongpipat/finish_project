@@ -73,7 +73,7 @@
                             <i class="fas fa-city fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">วิทยุสื่อสารสำหรับองค์กร</h4>
-                        <p class="text-muted">การสื่อสารมีความสำคัญในทุกองค์กร 
+                        <p class="text-muted">การสื่อสารมีความสำคัญในทุกองค์กร
                                 <br>ประสานงานในทุกภาคส่วนอย่างมืออาชีพ</br></p>
                     </div>
                     <div class="col-md-4">
@@ -82,7 +82,7 @@
                             <i class="fas fa-pager fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Gateway System</h4>
-                        <p class="text-muted">สามารถใช้งานร่วมกับวิทยุสื่อสารรูปแบบเดิมได้ 
+                        <p class="text-muted">สามารถใช้งานร่วมกับวิทยุสื่อสารรูปแบบเดิมได้
                             <br>ใช้งานง่ายไร้ข้อจำกัด เมื่อติดตั้งระบบเกตเวย์</br></p>
                     </div>
                 </div>
@@ -95,189 +95,27 @@
                     <h2 class="section-heading text-uppercase">shop</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
+
                 <div class="row">
+                @foreach ($product as $pro)
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/11.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">T.C.COM TCM-5</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุเอกชน</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
 
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/222.jpg') }}" alt="..." />
-                            </a>
+
+                                <img class="img-fluid" src="{{ asset('backend/img/img_pro/'.$pro->image) }}" alt="..." />
+
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">SPENDER TC-246H Plus</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุเอกชน</div>
+                                <div class="portfolio-caption-heading">{{$pro->name}}</div>
+                                <h6>{{$pro->description}}</h6>
+                                <div class="portfolio-caption-heading text-warning">ราคา : {{$pro->price}} THB</div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/333.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">ICOM IC-80FX PLUS</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุเอกชน</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/444.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">SPENDER DHS-8000H</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุราชการ</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/555.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">SPENDER GM-888MTV</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุราชการ</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/66.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">MOTOROLA XiR-P8268</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุราชการ</div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 7-->
-                        <br><div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/777.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">YAESU FM-9012</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุสมัครเล่น</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 8-->
-                        <br><div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/888.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">T.C.COM TCM-1 PLUS</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุสมัครเล่น</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-8">
-                        <!-- Portfolio item 9-->
-                        <br><div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/999.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">SPEEDER SP-IP4 PLUS</div>
-                                <div class="portfolio-caption-subheading text-muted">วิทยุสมัครเล่น</div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 10-->
-                        <br><div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/1010.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">ICOM IC-5000FX</div>
-                                <div class="portfolio-caption-subheading text-muted">สินค้าเข้าใหม่</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 11-->
-                        <br><div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal11">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/1111.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">MOTOROLA CP-246i</div>
-                                <div class="portfolio-caption-subheading text-muted">สินค้าเข้าใหม่</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-8">
-                        <!-- Portfolio item 12-->
-                        <br><div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/1214.jpg') }}" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">ICOM IC-86FX</div>
-                                <div class="portfolio-caption-subheading text-muted">สินค้าเข้าใหม่</div>
-                            </div>
-                        </div>
-                    </div> 
+                    @endforeach
                 </div>
+
         </section>
         <!-- Team-->
         <section class="page-section bg-light" id="team">
@@ -290,30 +128,30 @@
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="{{ asset('frontend/assets/img/team/a1.jpg') }}" alt="..." />
-                            
+
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="{{ asset('frontend/assets/img/team/a2.jpg') }}" alt="..." />
-                            
+
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="{{ asset('frontend/assets/img/team/a3.jpg') }}" alt="..." />
-                            
+
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"><br><h3>ภัทรวิชญ์ เทคโนโลยี</h3></br>
-                        ภัทรวิชญ์ เทคโนโลยี ให้บริการเกี่ยวกับวิทยุสื่อสาร ที่ใช้ภายในองค์กรด้วยประสบการณ์ด้านวิทยุสื่อสารมามากกว่าสิบปี ทางเราได้พัฒนาคุณภาพด้านสินค้าและบริการอย่างต่อเนื่อง 
-                        ปัจจุบันเรามีพื้นที่ให้บริการและสถานที่จอดรถสำหรับลูกค้ากว้างขวางมากยิ่งขึ้น ลูกค้าสามารถนั่งรอรับสินค้าหรือรอรับเครื่องซ่อมได้อย่างสะดวกสบาย 
+                        ภัทรวิชญ์ เทคโนโลยี ให้บริการเกี่ยวกับวิทยุสื่อสาร ที่ใช้ภายในองค์กรด้วยประสบการณ์ด้านวิทยุสื่อสารมามากกว่าสิบปี ทางเราได้พัฒนาคุณภาพด้านสินค้าและบริการอย่างต่อเนื่อง
+                        ปัจจุบันเรามีพื้นที่ให้บริการและสถานที่จอดรถสำหรับลูกค้ากว้างขวางมากยิ่งขึ้น ลูกค้าสามารถนั่งรอรับสินค้าหรือรอรับเครื่องซ่อมได้อย่างสะดวกสบาย
                         ทางเรามีความเข้าใจปัญหาด้านวิทยุสื่อสารเป็นอย่างดี ยินดีให้คำปรึกษาเกี่ยวกับการใช้งานด้านต่างๆ บริการของเรา มีดังนี้
                         <br>- จำหน่ายวิทยุสื่อสาร
                         <br>- ให้เช่าวิทยุสื่อสารทั้งแบบ รายวัน-รายเดือน-รายปี
-                        <br>- รับซ่อมวิทยุสื่อสาร 
+                        <br>- รับซ่อมวิทยุสื่อสาร
                         <br>- บริการตอบคำถามด้านการใช้งาน
                         <br>- บริการให้คำปรึกษาปัญหาวิทยุสื่อสารในอาคารสูง</p>
                     </div>
@@ -409,7 +247,7 @@
                     <div class="col-md-6">
                     <div class="d-none" id="submitErrorMessage"><div class="text- text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>  
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
                 </form>
             </div>
         </section>
@@ -431,473 +269,8 @@
 
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">T.C.COM TCM-5</h2>
-                                    <p class="item-intro text-muted">วิทยุเอกชน</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/111.jpg') }}"  alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุเอกชน (245 MHz.)
-                                        <br><strong>ความถี่ : </strong> 245.000-245.9875 MHz.
-                                        <br><strong>ยี่ห้อ : </strong> T.C.COM </br>
-                                        <strong>รุ่น : </strong> TCM-5
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            2,ุ150 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">SPENDER TC-246H Plus</h2>
-                                    <p class="item-intro text-muted">วิทยุเอกชน</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/22.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุเอกชน (245 MHz.)
-                                        <br><strong>ความถี่ : </strong> 245.0000 MHz.-246.9875 MHz.
-                                        <br><strong>ยี่ห้อ : </strong> SPENDER</br>
-                                        <strong>รุ่น : </strong> TC-246H PLUS
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            3,ุ890 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">ICOM IC-80FX PLUS</h2>
-                                    <p class="item-intro text-muted">วิทยุเอกชน</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/33.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุเอกชน (245 MHz.)
-                                        <br><strong>ความถี่ : </strong> 245.0000-246.9875 MHz.
-                                        <br><strong>ยี่ห้อ : </strong> ICOM </br>
-                                        <strong>รุ่น : </strong> IC-80FX PLUS
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            3,ุ500 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">SPENDER DHS-8000H</h2>
-                                    <p class="item-intro text-muted">วิทยุราชการ</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/44.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุราชการ VHF (136-174 MHz.)
-                                        <br><strong>ความถี่ : </strong> 136.0000-174.0000 MHz.
-                                        <br><strong>ยี่ห้อ : </strong> SPENDER </br>
-                                        <strong>รุ่น : </strong> DHS-8000H
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            4,ุ275 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">SPENDER GM-888MTV                                    </h2>
-                                    <p class="item-intro text-muted">วิทยุราชการ</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/555.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุราชการ VHF (136-174 MHz.)
-                                        <br><strong>ความถี่ : </strong> 136.0000-174.0000 MHz.
-                                        <br><strong>ยี่ห้อ : </strong> SPENDER</br>
-                                        <strong>รุ่น : </strong> GM-888MTV
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            13,ุ330 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">MOTOROLA XiR-P8268</h2>
-                                    <p class="item-intro text-muted">วิทยุราชการ</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/66.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุราชการ VHF (136-174 MHz.)
-                                        <br><strong>ความถี่ : </strong> 136.0000-174.0000 MHz.
-                                        <br><strong>ยี่ห้อ : </strong> MOTOROLA </br>
-                                        <strong>รุ่น : </strong> XiR-P8268
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            20,ุ500 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 7 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">YAESU FM-9012</h2>
-                                    <p class="item-intro text-muted">วิทยุสมัครเล่น</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/777.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุสมัครเล่น (144-147 MHz.)
-                                        <br><strong>ความถี่ : </strong> 144.0000-147.0000 MHz.
-                                        <br><strong>ยี่ห้อ : </strong>YAESU</br>
-                                        <strong>รุ่น : </strong> FM-9012
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            13,ุ330 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 8 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">T.C.COM TCM-1 PLUS</h2>
-                                    <p class="item-intro text-muted">วิทยุสมัครเล่น</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/88.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุสมัครเล่น (144-147 MHz.)
-                                        <br><strong>ความถี่ : </strong> 144.0000-146.0000 MHz.
-                                        <br><strong>ยี่ห้อ : </strong>T.C.COM</br>
-                                        <strong>รุ่น : </strong> TCM-1 PLUS
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            2,ุ570 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 9 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">SPEEDER SP-IP4 PLUS</h2>
-                                    <p class="item-intro text-muted">วิทยุสมัครเล่น</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/99.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุสมัครเล่น (144-147 MHz.)
-                                        <br><strong>ความถี่ : </strong> 144.0000-147.0000 MHz.
-                                        <br><strong>ยี่ห้อ : </strong>SPEEDER</br>
-                                        <strong>รุ่น : </strong> SP-IP4 PLUS
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            2,450 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 10 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">ICOM IC-5000FX</h2>
-                                    <p class="item-intro text-muted">วิทยุเอกชน</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/1010.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุเอกชน (245 MHz.)
-                                        <br><strong>ความถี่ : </strong> 245.000-245.9875 MHz.
-                                        <br><strong>ยี่ห้อ : </strong>ICOM</br>
-                                        <strong>รุ่น : </strong> IC-5000FX
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            10,ุ900 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 11 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">MOTOROLA CP-246i</h2>
-                                    <p class="item-intro text-muted">วิทยุเอกชน</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/1111.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุเอกชน (245 MHz.)
-                                        <br><strong>ความถี่ : </strong> 245.0000-245.9875 MHz.
-                                        <br><strong>ยี่ห้อ : </strong>MOTOROLA</br>
-                                        <strong>รุ่น : </strong> CP-246i
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            7,ุ900 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 12 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ asset('frontend/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">ICOM IC-86FX</h2>
-                                    <p class="item-intro text-muted">วิทยุเอกชน</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('frontend/assets/img/portfolio/1213.jpg') }}" alt="..." />
-                                    <p><strong>ประเภท : </strong> วิทยุเอกชน (245 MHz.)
-                                        <br><strong>ความถี่ : </strong> 245.0000-246.9875 MHz.
-                                        <br><strong>ยี่ห้อ : </strong>ICOM</br>
-                                        <strong>รุ่น : </strong> IC-86FX
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>price :</strong>
-                                            4,ุ890 THB 
-                                        </li>
-                                        <li>
-                                            <strong>ID line :</strong>
-                                            @pattarawit.net
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

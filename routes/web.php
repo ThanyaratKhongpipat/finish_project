@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')
+    ->with("product" , Product::all());
 });
 Route::get('/product', function () {
     return view('.product')
@@ -25,6 +26,8 @@ Route::get('/product', function () {
 Route::get('/contact', function () {
     return view('front_end.contact');
 });
+
+// Route::get('add/product/{id}',ProductController::class, 'addproduct');
 
 
 Auth::routes();
